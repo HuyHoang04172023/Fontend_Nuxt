@@ -6,8 +6,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import ToDoList from '~/components/ToDoList.vue';
-import ToDoForm from '~/components/ToDoForm.vue';
+import ToDoList from '~/components/day6/ToDoList/ToDoList.vue';
+import ToDoForm from '~/components/day6/ToDoList/ToDoForm.vue';
 const todos = ref([]);
 
 onMounted(() => {

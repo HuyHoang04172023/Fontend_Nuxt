@@ -14,5 +14,5 @@
 <script setup>
 import { useFetch } from '#app'
 
-const { data, pending, error } = await useFetch('/api/hello');
+const { data, pending, error } = await useFetch('/api/day7/hello');
 </script>

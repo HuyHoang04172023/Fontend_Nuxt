@@ -31,24 +31,26 @@
   const editing = ref(null);
   
   const fetchItems = async () => {
-    const data = await $fetch('/api/items');
+    const data = await $fetch('/api/day7/items');
     items.value = data;
   };
   
   const addItem = async () => {
-    await $fetch('/api/items', { method: 'POST', body: { name: newItem.value } });
+    await $fetch('/api/day7/items', { method: 'POST', body: { name: newItem.value } });
     newItem.value = '';
     await fetchItems();
   };
   
   const deleteItem = async (id) => {
   try {
-    const response = await $fetch(`/api/items/${id}`, { method: 'DELETE' });
-
+    const response = await $fetch(`/api/day7/items`, { method: 'DELETE',
+      body: {
+        id: id,
+      }
+     });
     if (!response.success) {
       throw new Error(response.message || 'Failed to delete item');
     }
-
     await fetchItems();
   } catch (error) {
     console.error('Error deleting item:', error.message);
@@ -60,12 +62,19 @@
   const editItem = (item) => {
     editing.value = { ...item };
   };
-  
+
   const updateItem = async () => {
-    await $fetch(`/api/items/${editing.value.id}`, { method: 'PUT', body: { name: editing.value.name } });
-    editing.value = null;
-    await fetchItems();
-  };
+  await $fetch(`/api/day7/items`, { 
+    method: 'PUT', 
+    body: { 
+      id: editing.value.id, 
+      name: editing.value.name 
+    } 
+  });
+  editing.value = null;
+  await fetchItems();
+};
+
   
   onMounted(fetchItems);
   </script>

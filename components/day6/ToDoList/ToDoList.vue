@@ -2,7 +2,7 @@
 <template>
     <ul>
       <li v-for="todo in todos" :key="todo.id">
-        <nuxt-link :to="`/to-do-list/${todo.id}`">{{ todo.title }}</nuxt-link>
+        <nuxt-link :to="`/day6/to-do-list/${todo.id}`">{{ todo.title }}</nuxt-link>
       </li>
     </ul>
   </template>
