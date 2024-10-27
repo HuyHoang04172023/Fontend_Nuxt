@@ -3,7 +3,7 @@
       <h1>Danh sách Bài viết</h1>
       <ul>
         <li v-for="post in posts" :key="post.id">
-          <NuxtLink :to="`/posts/${post.id}`">{{ post.title }}</NuxtLink> (Category: <NuxtLink :to="`/category/${post.categoryId}`">{{ getCategoryName(post.categoryId) }}</NuxtLink>)
+          <NuxtLink :to="`/day8/posts/${post.id}`">{{ post.title }}</NuxtLink> (Category: <NuxtLink :to="`/day8/category/${post.categoryId}`">{{ getCategoryName(post.categoryId) }}</NuxtLink>)
         </li>
       </ul>
       <NuxtLink to="/day8/posts/add-post">Thêm bài viết mới</NuxtLink><br>

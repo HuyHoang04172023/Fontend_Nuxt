@@ -4,7 +4,7 @@
   
       <ul>
         <li v-for="category in categories" :key="category.id">
-          <NuxtLink :to="`/category/${category.id}`">{{ category.name }}</NuxtLink>
+          <NuxtLink :to="`/day8/category/${category.id}`">{{ category.name }}</NuxtLink>
           <button @click="editCategory(category)">Chỉnh sửa</button>
           <button @click="deleteCategory(category.id)">Xóa</button>
         </li>
@@ -12,6 +12,7 @@
   
       <h2>{{ editingCategory ? 'Cập nhật' : 'Thêm' }} Danh mục</h2>
       <CategoryForm :category="editingCategory" />
+      <NuxtLink to="/day8/posts">Quay lại danh sách</NuxtLink>
     </div>
   </template>
   
