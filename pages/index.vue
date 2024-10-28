@@ -28,11 +28,7 @@
 
     <div class="day-section">
       <h1>Day 10</h1>
-      <NuxtLink to="/day10/LazyLoading" class="link">Bài 1</NuxtLink>
-      <NuxtLink to="/day10/" class="link">Bài 2</NuxtLink>
-      <NuxtLink to="/day10/" class="link">Bài 3</NuxtLink>
-      <NuxtLink to="/day10/" class="link">Bài 4</NuxtLink>
-      <NuxtLink to="/day10/" class="link">Bài 5</NuxtLink>
+      <NuxtLink to="/day10/LazyLoading" class="link">Day 10</NuxtLink>
     </div>
   </div>
 </template>
