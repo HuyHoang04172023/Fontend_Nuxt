@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   ],
   nitro: {
     prerender: {
-      routes: ['/todos/1', '/todos/2'],
+      routes: ['/day8/todos/1', '/day8/todos/2'],
     },
   },
 })
